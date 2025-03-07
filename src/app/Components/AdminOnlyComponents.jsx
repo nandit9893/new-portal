@@ -101,6 +101,7 @@ const AdminEmployerPage = () => {
     { _id: 10, title: "Settings", icon: <FaCog /> },
   ];
 
+
   const handleActivity = (title) => {
     setCurrentSideTitle(title);
     setActiveMenu(title);
