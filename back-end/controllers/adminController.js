@@ -42,7 +42,7 @@ export const loginAdmin = async (req, res, next) => {
 };
 
 export const registerAdmin = async (req, res, next) => {
-  const { username, email, password, position, salary, name, mobile_number } =
+  const { username, email, password, position, salary, name } =
     req.body;
 
   // Validate input
@@ -51,7 +51,6 @@ export const registerAdmin = async (req, res, next) => {
   if (!password || password.length < 6)
     return next("Password is required and must be at least 6 characters");
   if (!name) return next("Name is required");
-  if (!mobile_number) return next("Mobile number is required");
 
   try {
     // Check if admin already exists
