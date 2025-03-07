@@ -1,5 +1,6 @@
 "use client"
 import React, { useState } from "react";
+import Navbar from "../Components/Navbar";
 
 export default function HelpSupport() {
   const [priority, setPriority] = useState(1);
@@ -25,6 +26,8 @@ export default function HelpSupport() {
   };
 
   return (
+    <>
+    <Navbar />
     <div className="flex justify-center items-center min-h-screen bg-gray-100">
       <div className="bg-white p-6 rounded-lg shadow-lg w-full max-w-lg">
         <h2 className="text-xl font-bold text-center mb-4">Raise a Support Ticket</h2>
@@ -61,5 +64,6 @@ export default function HelpSupport() {
         </form>
       </div>
     </div>
+    </>
   );
 }

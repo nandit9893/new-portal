@@ -1,5 +1,6 @@
 "use client"
 import React, { useState } from "react";
+import Navbar from "../Components/Navbar";
 
 export default function Payment() {
   const [amount, setAmount] = useState(1234); // Default amount
@@ -8,6 +9,8 @@ export default function Payment() {
   const [fullName, setFullName] = useState("");
 
   return (
+    <>
+    <Navbar />
     <div className="flex items-center justify-center min-h-screen bg-gray-100 p-4">
       <div className="w-full max-w-md bg-white p-6 rounded-lg shadow-md border">
         {/* Title */}
@@ -74,5 +77,6 @@ export default function Payment() {
         </button>
       </div>
     </div>
+    </>
   );
 }

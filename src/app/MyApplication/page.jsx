@@ -2,9 +2,12 @@ import React from "react";
 import Header from "../Components/Headerfile";
 import JobApplications from "../Components/ListItem";
 import Footer from "../Components/Footer";
+import Navbar from "../Components/Navbar";
 
 const MyApplicationPage = () => {
   return (
+    <>
+    <Navbar/>
     <div className="flex flex-col min-h-screen bg-gray-50">
       {/* Header */}
       <Header />
@@ -17,6 +20,7 @@ const MyApplicationPage = () => {
       {/* Footer */}
       <Footer />
     </div>
+    </>
   );
 };
 
