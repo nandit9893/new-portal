@@ -45,14 +45,14 @@ const Footer = () => {
               <p className="text-white text-[15px]">For Employers</p>
             </div>
           </div>
-          <div className="flex flex-col gap-4 w-96">
+          <div className="flex flex-col gap-4 sm:w-96 w-80">
             <h4 className="text-white text-2xl">Newsletter</h4>
             <p className="text-gray-300 text-[15px]">Subscribe to our Newsletter</p>
             <input
               type="text"
               className="w-full border-2 border-gray-600 rounded-xl p-3 placeholder:text-gray-500"
               placeholder="Email Address"
-            />
+            />i 
             <p className="bg-[#309689] text-white p-3 rounded-xl text-center font-semibold">
               Subscribe Now
             </p>
@@ -66,14 +66,7 @@ const Footer = () => {
           <p className="text-gray-400">Copyright Job Portal 2025, Designed by Team-5</p>
         </div>
       </div>
-
-      {/* Dialogflow Messenger */}
-      <df-messenger
-  intent="WELCOME"
-  chat-title="JobBuddy"
-  agent-id="593fa4ae-4881-441d-9659-e78e3f0e860c"
-  language-code="en"
-></df-messenger>
+      <df-messenger intent="WELCOME" chat-title="JobBuddy" agent-id="593fa4ae-4881-441d-9659-e78e3f0e860c"language-code="en"></df-messenger>
     </div>
   );
 };
