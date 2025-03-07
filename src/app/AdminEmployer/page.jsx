@@ -12,7 +12,7 @@ const Page = () => {
     if (!token) {
       router.push("/AdminLogin"); 
     }
-  }, []);
+  }, [router]); // Added `router` to the dependency array
 
   return (
     <div>

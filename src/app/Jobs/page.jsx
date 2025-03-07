@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState , Suspense } from "react";
 import JobList from "../Components/Comp";
 import Hero from "../Components/Upper";
 import JobFilterSidebar from "../Components/Sidebar";
@@ -25,6 +25,7 @@ const JobsPage = () => {
     fetchAllJobs();
   }, []);
   return (
+    <Suspense fallback={<p>Loading...</p>}>
     <div>
 		<Navbar/>
       <Hero />
@@ -44,6 +45,7 @@ const JobsPage = () => {
 
       <CompanyCarousel />
     </div>
+    </Suspense>
   );
 };
 

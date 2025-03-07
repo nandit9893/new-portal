@@ -86,18 +86,18 @@ const AdminEmployerPage = () => {
 
   const sideBarDashboard = [
     { _id: 1, title: "Dashboard", icon: <FaStar /> },
-    { _id: 2, title: "User Management", icon: <UserIcon /> },
-    { _id: 3, title: "Job Management", icon: <User2Icon /> },
+    // { _id: 2, title: "User Management", icon: <UserIcon /> },
+    // { _id: 3, title: "Job Management", icon: <User2Icon /> },
     { _id: 4, title: "Payment", icon: <BiMoneyWithdraw /> },
     { _id: 5, title: "Blog", icon: <FaBlog /> },
-    { _id: 6, title: "Job Search", icon: <HiOutlineUser /> },
-    {
-      _id: 7,
-      title: "Help and Support",
-      icon: <HiOutlineQuestionMarkCircle />,
-    },
-    { _id: 8, title: "Reports", icon: <HiOutlineDocument /> },
-    { _id: 9, title: "Email Support", icon: <FaEnvelope /> },
+    // { _id: 6, title: "Job Search", icon: <HiOutlineUser /> },
+    // {
+    //   _id: 7,
+    //   title: "Help and Support",
+    //   icon: <HiOutlineQuestionMarkCircle />,
+    // },
+    // { _id: 8, title: "Reports", icon: <HiOutlineDocument /> },
+    // { _id: 9, title: "Email Support", icon: <FaEnvelope /> },
     { _id: 10, title: "Settings", icon: <FaCog /> },
   ];
 

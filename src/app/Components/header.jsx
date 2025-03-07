@@ -1,5 +1,6 @@
 "use client";
 import { FaBookmark, FaEye, FaBell } from "react-icons/fa";
+import Image from "next/image";
 
 const Header = () => {
   return (
@@ -16,8 +17,9 @@ const Header = () => {
             Welcome <span className="font-bold">Divya Sain</span> 👋
           </p>
           <p className="text-xs hidden sm:block">
-            Here's what's happening with you today.
-          </p>
+            Here&#39;s what&apos;s happening with you today.
+           </p>
+
         </div>
       </div>
 
@@ -30,12 +32,15 @@ const Header = () => {
 
         {/* Profile Image */}
         <div className="h-8 w-8 rounded-full bg-yellow-400 flex items-center justify-center border border-white overflow-hidden">
-          <img
-            src="user.png"
-            alt="User"
+
+       <Image
+              src="/user.png"
+              alt="User"
+              width={32}  // Match h-8 w-8 (8 * 4 = 32px)
+              height={32}
             className="h-full w-full object-cover"
             onError={(e) => (e.target.style.display = "none")}
-          />
+           />
         </div>
       </div>
     </div>

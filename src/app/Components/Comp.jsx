@@ -2,17 +2,19 @@
 import React from "react";
 import { Bookmark, Briefcase, Clock, DollarSign, MapPin } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 const JobCard = ({ job }) => {
 	return (
 		<div className="flex flex-col md:flex-row items-start md:items-center justify-between p-6 border rounded-lg shadow-md bg-white w-full mx-auto mb-4">
 			<div className="flex items-start md:items-center gap-4 w-full">
 				<div className="flex-shrink-0 w-14 h-14 bg-gray-200 rounded-full flex items-center justify-center overflow-hidden">
-					<img
-						src={job.companyLogo}
-						alt="Company Logo"
-						className="w-12 h-12 rounded-full object-cover"
-					/>
+				<Image
+                        src={job.companyLogo}
+                   width={500}
+                   height={500}
+				    alt="Picture of the author"
+                />
 				</div>
 				<div className="w-full">
 					<span className="text-xs text-gray-500">
