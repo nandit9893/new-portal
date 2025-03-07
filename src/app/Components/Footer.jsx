@@ -21,9 +21,7 @@ const Footer = () => {
               <BiShoppingBag className="text-white text-3xl" />
               <h3 className="text-white text-2xl font-semibold">Job Portal</h3>
             </div>
-            <p className="text-white text-xl font-semibold">
-              Elite jobs for elite minds—start your journey and meet your dream employer!
-            </p>
+            <p className="text-white text-xl font-semibold">Elite jobs for elite minds—start your journey and meet your dream employer!</p>
           </div>
           <div className="flex flex-col gap-5 w-36">
             <h4 className="text-white text-2xl">Company</h4>
@@ -48,14 +46,8 @@ const Footer = () => {
           <div className="flex flex-col gap-4 sm:w-96 w-80">
             <h4 className="text-white text-2xl">Newsletter</h4>
             <p className="text-gray-300 text-[15px]">Subscribe to our Newsletter</p>
-            <input
-              type="text"
-              className="w-full border-2 border-gray-600 rounded-xl p-3 placeholder:text-gray-500"
-              placeholder="Email Address"
-            />i 
-            <p className="bg-[#309689] text-white p-3 rounded-xl text-center font-semibold">
-              Subscribe Now
-            </p>
+            <input type="text" className="w-full border-2 border-gray-600 rounded-xl p-3 placeholder:text-gray-500" placeholder="Email Address"/>
+            <p className="bg-[#309689] text-white p-3 rounded-xl text-center font-semibold">Subscribe Now</p>
             <div className="flex gap-2 items-center justify-center">
               <p className="text-gray-300 underline">Privacy Terms</p>
               <p className="text-gray-300 underline">Terms & Conditions</p>

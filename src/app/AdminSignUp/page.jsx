@@ -17,7 +17,6 @@ const AdminRegisterPage = () => {
     password: "",
     confirmPassword: "",
   });
-  
   const router = useRouter();
 
   const inputChangeHandler= (event) => {
@@ -53,22 +52,33 @@ const AdminRegisterPage = () => {
       toast.error("Passwords do not match");
       return;
     }
+  
     const url = `${process.env.NEXT_PUBLIC_STRAPI_SERVER_BASE_URL}/api/admin/register`;
+  
     try {
       const response = await axios.post(url, {
         name: userSignUp.name,
         username: userSignUp.username,
         email: userSignUp.email,
         password: userSignUp.password,
-      });
-
+      });  
       if (response.status === 201) {
         toast.success("Registration successful!");
-        setUserSignUp({ name: "", email: "", password: "", confirmPassword: "", username: "" });
-        router.push("/AdminLogin");
+        setUserSignUp({
+          name: "",
+          email: "",
+          password: "",
+          confirmPassword: "",
+          username: "",
+        });
+  
+        setTimeout(() => {
+          router.push("/AdminLogin");
+        }, 500);
       }
     } catch (error) {
-      toast.error(error.response?.data?.message || "Something went wrong!");
+      const errorMessage = error.response?.data?.message;
+      toast.error(typeof errorMessage === "string" ? errorMessage : "Something went wrong!");
     }
   };
 
@@ -84,7 +94,7 @@ const AdminRegisterPage = () => {
         email,
       });
       if (response.data.success) {
-        const token = response.data.token;
+        const token = response?.data?.token;
         localStorage.setItem("authToken", token);
         toast.success("Login successful!");
         router.push("/AdminEmployer");

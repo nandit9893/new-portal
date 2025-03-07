@@ -10,7 +10,7 @@ const JobCard = ({ job }) => {
 			<div className="flex items-start md:items-center gap-4 w-full">
 				<div className="flex-shrink-0 w-14 h-14 bg-gray-200 rounded-full flex items-center justify-center overflow-hidden">
 				<Image
-                        src={job.companyLogo}
+                        src="/operation.jpg"
                    width={500}
                    height={500}
 				    alt="Picture of the author"

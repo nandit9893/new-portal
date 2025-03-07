@@ -65,7 +65,6 @@ export const registerAdmin = async (req, res, next) => {
       position: position || "Not Specified", // Default value if not provided
       salary: salary || 0, // Default value if not provided
       name,
-      mobile_number,
     });
 
     await newAdmin.save();
@@ -84,7 +83,6 @@ export const registerAdmin = async (req, res, next) => {
         position: newAdmin.position,
         salary: newAdmin.salary,
         name: newAdmin.name,
-        mobile_number: newAdmin.mobile_number,
       },
       token,
     });
