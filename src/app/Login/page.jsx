@@ -6,8 +6,8 @@ import { useRouter } from "next/navigation";
 import axios from "axios";
 import toast from "react-hot-toast";
 import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
-import app from "../firebase.js";
 import Navbar from "../Components/Navbar.jsx";
+import app from "../firebase.js";
 
 const LoginPage = () => {
   const [userLoginIn, setUserLoginIn] = useState({
