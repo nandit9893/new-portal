@@ -1,36 +1,227 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Job Portal Backend
 
-## Getting Started
 
-First, run the development server:
+A robust backend system for a job portal with authentication, job management, resumes, payments, and an admin panel.
 
-```bash
+🚀 Features
+
+✅ User Authentication (NextAuth.js with JWT)
+✅ Job Posting & Management (Admin & User roles)
+✅ Resume Upload & Builder (Cloudinary/AWS S3)
+✅ Secure API Routes (JWT, OAuth, Hash Password)
+✅ Payment Integration (Razorpay/Stripe)
+✅ Admin Panel (Manage users, jobs, applications)
+✅ Scalable & Optimized for Performance
+
+🛠️ Tech Stack
+
+---
+
+🛠️ Tech Stack
+
+Backend: Node.js, Express.js
+
+Database: MongoDB (Mongoose ORM)
+
+Authentication: JWT & OAuth
+
+Storage: Cloudinary / AWS S3 (for resumes)
+
+Payments: Razorpay 
+
+Security: JWT, Hash Password
+
+
+---
+
+📌 Prerequisites
+
+Ensure you have the following installed before starting:
+
+Node.js (Latest LTS version)
+
+MongoDB (Local or cloud database)
+
+Cloudinary / AWS S3 Account (For resume storage)
+
+Razorpay / Stripe Account (For payments)
+
+
+
+
+
+---
+
+💻 Getting Started
+
+1️⃣ Clone the repository:
+
+git clone <repository-url>
+cd back-end
+
+2️⃣ Install dependencies:
+
+npm install
+
+3️⃣ Configure environment variables:
+
+Copy .env.example to .env
+
+Fill in the required environment variables
+
+
+4️⃣ Run the development server:
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+🔗 Open http://localhost:3000 in your browser
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+---
 
-## Learn More
+📌 Environment Variables
 
-To learn more about Next.js, take a look at the following resources:
+Create a .env file with these variables:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Database
+MONGODB_URI=
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+# Authentication
+JWT_SECRET=
 
-## Deploy on Vercel
+# Cloud Storage
+CLOUDINARY_CLOUD_NAME=
+CLOUDINARY_API_KEY=
+CLOUDINARY_API_SECRET=
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+# Payment Gateway
+RAZORPAY_KEY_ID=
+RAZORPAY_KEY_SECRET=
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+---
+
+📜 Available Scripts
+
+
+---
+
+back-end/
+│── config/                # Configuration files
+│── controllers/           # Business logic (API controllers)
+│   ├── adminController.js
+│   ├── applicationController.js
+│   ├── authController.js
+│   ├── blogController.js
+│   ├── hrController.js
+│   ├── jobController.js
+│   ├── jobdashboard.js
+│   ├── paymentController.js
+│   ├── profileController.js
+│   ├── reportController.js
+│   ├── resumeBuilderController.js
+│   ├── resumeController.js
+│   ├── settingsController.js
+│   ├── testController.js
+│   ├── userController.js
+│── middlewares/           # Middleware functions (auth, validation)
+│── models/                # MongoDB models (User, Job, Resume, etc.)
+│── public/                # Static assets
+│── routes/                # API route handlers
+│── uploads/               # Uploaded resumes & images
+│── index.js               # Main entry point
+
+
+---
+
+📧 Contact & Support
+
+For issues or feature requests, feel free to open an issue or contact me at:
+
+📩 Email: your-email@example.com
+💼 LinkedIn: Your LinkedIn Profile
+
+
+---
+
+
+Job Portal Frontend
+
+A modern React.js (Next.js) frontend for a job portal, designed for job seekers, recruiters, and administrators with a seamless UI/UX.
+
+🚀 Features
+
+✅ User Authentication (Login, Register, JWT)
+✅ Job Listings & Applications
+✅ Admin Dashboard (Manage Users, Jobs, Payments)
+✅ Resume Upload & Profile Management
+✅ Payment Integration (Razorpay/Stripe)
+✅ Email Notifications (Nodemailer for OTPs & alerts)
+✅ Fully Responsive UI (Optimized for mobile & desktop)
+✅ Modern UI/UX (Tailwind CSS + React Components)
+
+
+---
+
+🛠️ Tech Stack
+
+Frontend: React.js, Next.js
+
+Styling: Tailwind CSS, Custom Components
+
+State Management: Context API / Redux
+
+Authentication: JWT + NextAuth
+
+Payments: Razorpay 
+
+
+
+
+
+---
+
+📂 Folder Structure
+
+src/
+│── app/                  # Application source code
+│   ├── AboutUs/          # About page
+│   ├── AdminEmployer/    # Employer dashboard
+│   ├── AdminLogin/       # Admin login page
+│   ├── AdminSignUp/      # Admin signup page
+│   ├── Components/       # Reusable UI components
+│   ├── ContactUs/        # Contact page
+│   ├── Emails/           # Email templates
+│   ├── fonts/            # Custom fonts
+│   ├── HelpSupport/      # Help & Support page
+│   ├── Home/             # Homepage
+│   ├── JobDetails/       # Job details page
+│   ├── Jobs/             # Job listings
+│   ├── Login/            # User login page
+│   ├── MyApplication/    # User job applications
+│   ├── Payment/          # Payment processing
+│   ├── Profile/          # User profile
+│   ├── Register/         # User registration
+│   ├── Resume/           # Resume upload & builder
+│   ├── UserManagement/   # Manage users (Admin)
+│── favicon.ico           # Website icon
+
+
+---
+
+💻 Getting Started
+
+1️⃣ Clone the repository:
+
+git clone <repository-url>
+cd frontend
+
+2️⃣ Install dependencies:
+
+npm install
+
+3️⃣ Run the development server:
+
+npm run dev
+
+🔗 Open http://localhost:3000 in your browser
+
