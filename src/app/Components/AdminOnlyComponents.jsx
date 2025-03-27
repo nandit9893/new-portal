@@ -29,6 +29,7 @@ import EmailSettings from "../Components/Email";
 import Reports from "../Components/Reports";
 import UserManagement from "./UserManagement";
 import AdminHeader from "./AdminHeader";
+import CreateJob from "../CreateJob/page";
 
 const AdminEmployerPage = () => {
   const [isCollapsed, setIsCollapsed] = useState(false);
@@ -90,23 +91,22 @@ const AdminEmployerPage = () => {
     // { _id: 3, title: "Job Management", icon: <User2Icon /> },
     { _id: 4, title: "Payment", icon: <BiMoneyWithdraw /> },
     { _id: 5, title: "Blog", icon: <FaBlog /> },
-    // { _id: 6, title: "Job Search", icon: <HiOutlineUser /> },
+    { _id: 6, title: "Job Creation", icon: <HiOutlineDocument /> }, // Added Job Creation
+    // { _id: 7, title: "Job Search", icon: <HiOutlineUser /> },
     // {
-    //   _id: 7,
+    //   _id: 8,
     //   title: "Help and Support",
     //   icon: <HiOutlineQuestionMarkCircle />,
     // },
-    // { _id: 8, title: "Reports", icon: <HiOutlineDocument /> },
-    // { _id: 9, title: "Email Support", icon: <FaEnvelope /> },
-    { _id: 10, title: "Settings", icon: <FaCog /> },
+    // { _id: 9, title: "Reports", icon: <HiOutlineDocument /> },
+    // { _id: 10, title: "Email Support", icon: <FaEnvelope /> },
+    { _id: 11, title: "Settings", icon: <FaCog /> },
   ];
-
 
   const handleActivity = (title) => {
     setCurrentSideTitle(title);
     setActiveMenu(title);
   };
-
 
   useEffect(() => {
     const handleResize = () => {
@@ -118,8 +118,7 @@ const AdminEmployerPage = () => {
 
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
-  },);
-
+  });
 
   return (
     <div className="sm:px-5 sm:py-2 flex-col min-h-screen w-full">
@@ -155,9 +154,7 @@ const AdminEmployerPage = () => {
                   onClick={() => handleActivity(item.title)}
                   key={item._id}
                   className={`flex items-center gap-5 ${
-                    activeMenu === item.title
-                      ? "bg-[#003092]"
-                      : null
+                    activeMenu === item.title ? "bg-[#003092]" : null
                   } cursor-pointer hover:bg-[#4635B1] py-2 px-5 rounded-2xl`}
                 >
                   <span className="text-lg font-semibold text-white">
@@ -193,9 +190,7 @@ const AdminEmployerPage = () => {
                       onClick={() => handleActivity(item.title)}
                       key={item._id}
                       className={`flex items-center gap-5 ${
-                        activeMenu === item.title
-                          ? "bg-[#003092]"
-                          : null
+                        activeMenu === item.title ? "bg-[#003092]" : null
                       } cursor-pointer hover:bg-[#4635B1] py-2 px-5 rounded-2xl`}
                     >
                       <span className="text-lg font-semibold text-white">
@@ -395,6 +390,16 @@ const AdminEmployerPage = () => {
           >
             <AdminHeader />
             <UserManagement />
+          </div>
+        )}
+        {currentSideTitle === "Job Creation" && (
+          <div
+            className={`flex flex-col gap-3 min-h-screen transition-all duration-300 ease-in-out ${
+              isCollapsed ? "w-full" : "w-4/5"
+            }`}
+          >
+            <AdminHeader />
+            <CreateJob />
           </div>
         )}
       </div>
